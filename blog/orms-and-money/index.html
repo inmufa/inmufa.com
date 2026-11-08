@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+
+<title>Why I stopped trusting an ORM with money — Inoyatullo Musayev</title>
+<meta name="description" content="What building a valuation engine that banks rely on taught me about decimals, float drift, and where an ORM's convenience turns into a liability.">
+<link rel="canonical" href="https://inmufa.com/blog/orms-and-money/">
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#120F10">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../styles/main.css">
+</head>
+
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="nav__name" href="../../">Inoyatullo Musayev</a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="../../#work">Home</a>
+      <a href="../../work/">Work</a>
+      <a href="../">Blog</a>
+      <a href="../../#contact">Contact</a>
+      <a class="nav__mobile" href="mailto:inmusfa@gmail.com">Email</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="section wrap post">
+    <header class="post__head">
+      <span class="label">2026-11-08 · 6 min read</span>
+      <h1 class="post__title">Why I stopped trusting an ORM with money</h1>
+    </header>
+
+    <div class="post__body">
+      <p>
+        e-expert prices real estate, vehicles and specialised machinery for banks that use
+        the number to decide how much to lend against it. That number has to be the same
+        number every time you ask for it, on every machine, for the life of the loan. Once
+        I understood that requirement properly, I stopped writing valuation math the way
+        Django makes it easy to write it.
+      </p>
+
+      <h2>The bug that taught me this</h2>
+      <p>
+        Early on, a comparative valuation came back with a different result on a
+        re-run of the same inputs, off by a few hundred som. Nothing in the business logic
+        had changed. The culprit was a chain of <code>DecimalField</code> values getting
+        coerced to Python <code>float</code> somewhere in a third-party scoring library,
+        then back to <code>Decimal</code> for storage. Floats don't round-trip cleanly
+        through that kind of chain. Each hop introduced a few bits of drift, and with
+        enough comparables in the average, the drift was visible in the final price.
+      </p>
+      <p>
+        The ORM wasn't wrong. It stores and fetches exactly what you tell it to. The
+        problem is that it's very easy to write code that looks like it's working with
+        exact decimal arithmetic the whole way through when it isn't, because nothing
+        in the type system stops a float from sneaking into the middle of the chain.
+      </p>
+
+      <h2>What changed</h2>
+      <p>
+        I moved every money-adjacent calculation into a small set of pure functions that
+        only accept <code>Decimal</code> and raise on anything else, no implicit casting
+        anywhere near them. The ORM still does what it's good at: fetching rows,
+        expressing relationships, handling migrations. It no longer touches a single
+        multiplication involving a price. If a value needs to leave that boundary for a
+        third-party library that only speaks float, it gets converted explicitly, logged,
+        and never converted back - the result of that step is treated as an estimate, not
+        a stored price.
+      </p>
+      <p>
+        I also added a property-based test that generates thousands of random comparable
+        sets and asserts the valuation function is deterministic: same input, byte-identical
+        output, every time, no matter the order the comparables arrive in. That test has
+        caught two regressions since, both from well-meaning refactors that looked
+        completely safe in review.
+      </p>
+
+      <h2>The actual lesson</h2>
+      <p>
+        An ORM is a tool for modelling your schema, not your arithmetic. The moment a
+        calculation feeds into a number someone else's money depends on, it deserves its
+        own boundary, its own types, and its own test that doesn't trust "it compiled" as
+        evidence of correctness. That boundary is maybe two hundred lines of code in a
+        service with tens of thousands. It's also the only part of it a cybersecurity
+        review and a bank's own auditors ever asked to see twice.
+      </p>
+    </div>
+
+    <a class="button post__back" href="../"><span>← All posts</span></a>
+  </article>
+</main>
+
+<footer class="wrap footer">
+  <span>Inoyatullo Musayev</span>
+  <span>Backend engineer · Tashkent</span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+
+<title>Permissions should be a row, not a deploy — Inoyatullo Musayev</title>
+<meta name="description" content="Hard-coded roles are the first thing that breaks once a marketplace has real staff. What changed when I moved Lapka's permission checks into the database.">
+<link rel="canonical" href="https://inmufa.com/blog/permissions-as-data/">
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#120F10">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../styles/main.css">
+</head>
+
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="nav__name" href="../../">Inoyatullo Musayev</a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="../../#work">Home</a>
+      <a href="../../work/">Work</a>
+      <a href="../">Blog</a>
+      <a href="../../#contact">Contact</a>
+      <a class="nav__mobile" href="mailto:inmusfa@gmail.com">Email</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="section wrap post">
+    <header class="post__head">
+      <span class="label">2026-09-30 · 4 min read</span>
+      <h1 class="post__title">Permissions should be a row, not a deploy</h1>
+    </header>
+
+    <div class="post__body">
+      <p>
+        Lapka is a pet-supplies marketplace that lives inside Telegram. Shops run their own
+        catalogue, orders and payments from a web dashboard. In the first version, access
+        control was what most backends start with: an <code>is_owner</code> boolean and a
+        handful of <code>if request.user.role == "manager"</code> checks scattered through
+        the views. It worked, until a shop owner asked for a staff account that could see
+        orders but not touch payouts.
+      </p>
+
+      <h2>Where the hard-coded version breaks</h2>
+      <p>
+        That request isn't exotic, it's the first thing every real shop asks for once it
+        has more than one person working it. With roles as code, answering it means adding
+        a new branch to every view that cares about permissions, shipping a deploy, and
+        hoping the next role request doesn't need a slightly different combination that
+        doesn't fit the branches you already wrote. Every shop's actual staffing situation
+        is slightly different, and code can't model "slightly different" without either
+        exploding into special cases or forcing everyone into the same three roles.
+      </p>
+
+      <h2>What a data-driven version looks like</h2>
+      <p>
+        I replaced the role checks with a permissions table: a set of named capabilities
+        (<code>orders.view</code>, <code>payouts.manage</code>, <code>catalogue.edit</code>,
+        and so on) and a join table mapping staff accounts to the capabilities they hold.
+        A view doesn't ask "is this user a manager," it asks "does this user hold
+        <code>payouts.manage</code>." The owner account is seeded with every capability and
+        that row is protected from being edited away, so there's always at least one account
+        that can't accidentally lock itself out.
+      </p>
+      <p>
+        Creating a new staff role, from the shop owner's side, is filling in a form that
+        ticks the capabilities they want and saving it. From my side, it's a migration that
+        ran once, months ago, and never needs to run again for this. The admin dashboard,
+        the bot, and the API all check the same table, so there's exactly one place
+        permissions logic can be wrong, not three that can quietly drift apart.
+      </p>
+
+      <h2>The part worth remembering</h2>
+      <p>
+        The win isn't "database over if-statements" as a rule, that's not universally true.
+        It's recognising which parts of a system's behaviour belong to the business, not to
+        the code, before the business asks for the first exception you didn't design for.
+        Permissions are almost always one of those parts. Treating them as data from day
+        one costs very little up front and removes an entire category of future deploys.
+      </p>
+    </div>
+
+    <a class="button post__back" href="../"><span>← All posts</span></a>
+  </article>
+</main>
+
+<footer class="wrap footer">
+  <span>Inoyatullo Musayev</span>
+  <span>Backend engineer · Tashkent</span>
+</footer>
+</body>
+</html>

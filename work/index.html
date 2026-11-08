@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+
+<title>Work — Inoyatullo Musayev</title>
+<meta name="description" content="Every system Inoyatullo Musayev has designed and shipped: Kigo, e-expert, Lapka, SYNAPSSE and more.">
+<link rel="canonical" href="https://inmufa.com/work/">
+<meta name="robots" content="noindex, follow">
+
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#120F10">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+<a class="skip" href="#cards">Skip to projects</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="nav__name" href="../">Inoyatullo Musayev</a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="../#work">Home</a>
+      <a class="is-current" href="./">Work</a>
+      <a href="../blog/">Blog</a>
+      <a href="../#contact">Contact</a>
+      <a class="nav__mobile" href="mailto:inmusfa@gmail.com">Email</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section wrap" aria-labelledby="work-title">
+    <header class="section__head is-visible">
+      <span class="label">Full archive</span>
+      <h2 id="work-title">Every system I've designed and shipped</h2>
+      <div class="section__rule" style="transform:none"></div>
+    </header>
+
+    <div class="cards" id="cards">
+      <article class="card card--wide">
+        <div class="card__top"><img class="card__logo" src="../assets/logos/kigo.png" alt="Kigo logo" width="40" height="40" loading="lazy"><span class="card__num">01</span><span class="label">2025 —</span></div>
+        <h3 class="card__title">Kigo</h3>
+        <p class="card__role">Backend lead · equity</p>
+        <p class="card__body">
+          A full booking and tournament ecosystem for sports clubs - court reservations, a
+          merchant panel for club owners, a coach marketplace with wallets and payouts, bar
+          POS, gift cards and subscription billing, plus three separate tournament systems:
+          club-run brackets, open-game matchmaking, and government-run competitions. Three
+          Telegram bots cover players, support and live tournament flow. I designed the domain
+          model and API surface across the platform; the team ships from a published OpenAPI
+          spec on a reviewed pull-request workflow.
+        </p>
+        <ul class="tech">
+          <li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li><li>Channels</li><li>aiogram</li><li>Docker</li>
+        </ul>
+        <a class="card__link" href="https://kigo.uz" target="_blank" rel="noopener noreferrer">kigo.uz</a>
+      </article>
+
+      <article class="card card--wide">
+        <div class="card__top"><span class="card__num">02</span><span class="label">2026 —</span></div>
+        <h3 class="card__title">e-expert</h3>
+        <p class="card__role">Backend architect</p>
+        <p class="card__body">
+          A digital asset-valuation platform used mainly by banks for loan-collateral
+          appraisal, alongside government bodies and independent experts - real estate,
+          vehicles, and specialised machinery, each priced by its own market-data model. The
+          platform runs at 99.2% valuation accuracy with results in under 5 minutes, ISO
+          27001-compliant data security throughout, and an interactive map of valued objects
+          with regional market analytics. I own the backend: pricing engines pulling
+          government cadastral and registry data, re-architected to cut the heaviest
+          valuations from minutes to seconds, plus security hardening delivered against a
+          ministry-level review.
+        </p>
+        <ul class="tech">
+          <li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li><li>Nuxt</li><li>Vue</li>
+        </ul>
+        <a class="card__link" href="https://e-expert.uz" target="_blank" rel="noopener noreferrer">e-expert.uz</a>
+      </article>
+
+      <article class="card">
+        <div class="card__top"><img class="card__logo" src="../assets/logos/lapka.png" alt="Lapka logo" width="40" height="40" loading="lazy"><span class="card__num">03</span><span class="label">2026</span></div>
+        <h3 class="card__title">Lapka</h3>
+        <p class="card__role">Sole engineer</p>
+        <p class="card__body">
+          A pet-supplies marketplace living entirely inside Telegram. Customers order from a
+          Mini App with variant filtering, reviews and favourites; shops run their own
+          catalogue, orders and payments - Click, Payme, saved cards - from a web dashboard;
+          couriers are dispatched through Yandex Delivery with live claim tracking. Permissions
+          are data-driven rather than hard-coded, so a new staff role is a row and not a deploy.
+        </p>
+        <ul class="tech">
+          <li>Django</li><li>DRF</li><li>MinIO</li><li>Redis</li><li>Click</li><li>Payme</li><li>Yandex Delivery</li>
+        </ul>
+        <a class="card__link" href="https://mylapka.uz" target="_blank" rel="noopener noreferrer">mylapka.uz</a>
+      </article>
+
+      <article class="card card--wide">
+        <div class="card__top"><img class="card__logo" src="../assets/logos/synapsse.png" alt="SYNAPSSE logo" width="40" height="40" loading="lazy"><span class="card__num">04</span><span class="label">2026</span></div>
+        <h3 class="card__title">SYNAPSSE</h3>
+        <p class="card__role">Creator · open source, MIT</p>
+        <p class="card__body">
+          A local-first memory graph for AI agents. An async Python daemon over embedded SQLite
+          exposes itself through the Model Context Protocol and renders the resulting graph as
+          an interactive WebGL canvas. Retrieval is hybrid — FTS5 keyword search alongside
+          vector similarity from ONNX embeddings running locally — so recall costs a fraction
+          of replaying a transcript, and nothing leaves the machine.
+        </p>
+        <ul class="tech">
+          <li>Python</li><li>FastAPI</li><li>SQLite · WAL</li><li>sqlite-vec</li><li>ONNX</li><li>MCP</li><li>WebGL</li>
+        </ul>
+        <a class="card__link" href="https://synapsse.io" target="_blank" rel="noopener noreferrer">synapsse.io</a>
+      </article>
+
+      <article class="card">
+        <div class="card__top"><img class="card__logo" src="../assets/logos/usps.png" alt="Ben USPS logo" width="40" height="40" loading="lazy"><span class="card__num">05</span><span class="label">2026</span></div>
+        <h3 class="card__title">Freight load board</h3>
+        <p class="card__role">Sole engineer</p>
+        <p class="card__body">
+          An end-to-end system for USPS contract couriers. Scrapers pull load bids, deduplicate
+          against a Redis-backed seen-set, publish to a Telegram channel within seconds, and
+          push over WebSockets to a live board. Runs in Docker behind nginx with certificate
+          renewal automated — the part of a side project that usually rots.
+        </p>
+        <ul class="tech">
+          <li>Django Channels</li><li>Daphne</li><li>WebSockets</li><li>PostgreSQL</li><li>nginx</li>
+        </ul>
+        <a class="card__link" href="https://usps.uz" target="_blank" rel="noopener noreferrer">usps.uz</a>
+      </article>
+
+      <article class="card">
+        <div class="card__top"><img class="card__logo" src="../assets/logos/sivi.png" alt="Sivi logo" width="40" height="40" loading="lazy"><span class="card__num">06</span><span class="label">2026</span></div>
+        <h3 class="card__title">Sivi</h3>
+        <p class="card__role">Sole engineer</p>
+        <p class="card__body">
+          An AI career assistant for the Uzbek job market, delivered through Telegram. It builds
+          and enhances resumes and exports them as PDF in three languages, then matches them to
+          vacancies by pgvector cosine similarity over an HNSW index. A Celery fleet aggregates
+          ten job platforms and seventeen Telegram channels on a rolling schedule, behind
+          subscriptions and pay-per-use credits settled through Click.
+        </p>
+        <ul class="tech">
+          <li>Django</li><li>Celery</li><li>PostgreSQL · pgvector</li><li>Redis</li><li>Embeddings</li><li>Click</li>
+        </ul>
+        <a class="card__link" href="https://sivi.uz" target="_blank" rel="noopener noreferrer">sivi.uz</a>
+      </article>
+
+      <article class="card card--wide">
+        <div class="card__top"><span class="card__num">07</span><span class="label">2026 —</span></div>
+        <h3 class="card__title">MDC Group</h3>
+        <p class="card__role">Founder · sole engineer</p>
+        <p class="card__body">
+          A small IT agency I started, built end to end: a Next.js landing with a lead form,
+          a FastAPI service that saves each lead before notifying admins and retries failed
+          Telegram sends on its own, and an aiogram support bot so clients can leave a request
+          by chat instead of a form. All of it sits behind a shared-server nginx router I
+          designed that reads the TLS SNI and passes raw connections through by domain, so
+          each product keeps its own compose stack and certs without touching the others.
+        </p>
+        <ul class="tech">
+          <li>Next.js</li><li>FastAPI</li><li>PostgreSQL</li><li>SQLAlchemy</li><li>aiogram</li><li>Docker</li><li>nginx</li>
+        </ul>
+        <a class="card__link" href="https://mdcgroup.uz" target="_blank" rel="noopener noreferrer">mdcgroup.uz</a>
+      </article>
+
+      <article class="card">
+        <div class="card__top"><span class="card__num">08</span><span class="label">2026</span></div>
+        <h3 class="card__title">klikz</h3>
+        <p class="card__role">Sole engineer</p>
+        <p class="card__body">
+          A single-store gaming-peripherals shop, storefront to backend: a React storefront
+          and a staff admin with per-key permissions, backed by a Django API that computes
+          totals, stock and delivery fees server-side and posts every new order to a Telegram
+          group as a live-updating card through Celery.
+        </p>
+        <ul class="tech">
+          <li>Django</li><li>DRF</li><li>React</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li>
+        </ul>
+        <a class="card__link" href="https://klikz.uz" target="_blank" rel="noopener noreferrer">klikz.uz</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap footer">
+  <span>Inoyatullo Musayev</span>
+  <span>Backend engineer · Tashkent</span>
+</footer>
+</body>
+</html>
