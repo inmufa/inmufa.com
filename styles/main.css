@@ -5,30 +5,30 @@
 
 /* --- tokens -------------------------------------------------- */
 :root {
-  --paper: #F1F2EE;
-  --panel: #FBFCFA;
-  --sunken: #E7E9E3;
+  --paper: #FAFAFA;
+  --panel: #FFFFFF;
+  --sunken: #F4F4F5;
 
-  --ink: #0F1417;
-  --ink-2: #3B4448;
-  --muted: #6E7772;
+  --ink: #09090B;
+  --ink-2: #3F3F46;
+  --muted: #71717A;
 
-  --line: #D6D9D1;
-  --line-strong: #B7BCB4;
+  --line: #E4E4E7;
+  --line-strong: #D4D4D8;
 
-  --accent: #B23A22;
-  --accent-wash: rgb(178 58 34 / 9%);
+  --accent: #2563EB;
+  --accent-wash: rgb(37 99 235 / 8%);
 
   --rim: rgb(255 255 255 / 95%);
-  --shadow: rgb(15 20 23 / 9%);
+  --shadow: rgb(9 9 11 / 9%);
 
-  --band: #12171A;
-  --band-ink: #F1F2EE;
-  --band-muted: #8C9691;
+  --band: #09090B;
+  --band-ink: #FAFAFA;
+  --band-muted: #9A9AA2;
   --specular: rgb(255 255 255 / 10%);
 
-  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --display: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --body: "Inter", "Helvetica Neue", Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --page: 1180px;
@@ -43,52 +43,52 @@
    unless the viewer has explicitly asked for light. */
 :root:not([data-theme="light"]) {
   @media (prefers-color-scheme: dark) {
-    --paper: #0F1112;
-    --panel: #171A1B;
-    --sunken: #1C201F;
+    --paper: #0A0A0B;
+    --panel: #141416;
+    --sunken: #1C1C1F;
 
-    --ink: #E9EBE7;
-    --ink-2: #C0C5C0;
-    --muted: #8B928D;
+    --ink: #FAFAFA;
+    --ink-2: #D4D4D8;
+    --muted: #8A8A92;
 
-    --line: #282D2D;
-    --line-strong: #3D4342;
+    --line: #27272A;
+    --line-strong: #3F3F46;
 
-    --accent: #E4704F;
-    --accent-wash: rgb(228 112 79 / 13%);
+    --accent: #5B8DEF;
+    --accent-wash: rgb(91 141 239 / 14%);
 
     --rim: rgb(255 255 255 / 7%);
-    --shadow: rgb(0 0 0 / 50%);
+    --shadow: rgb(0 0 0 / 55%);
 
-    --band: #E7E9E3;
-    --band-ink: #0F1417;
-    --band-muted: #5D6662;
-    --specular: rgb(15 20 23 / 7%);
+    --band: #FAFAFA;
+    --band-ink: #0A0A0B;
+    --band-muted: #71717A;
+    --specular: rgb(9 9 11 / 7%);
   }
 }
 
 :root[data-theme="dark"] {
-  --paper: #0F1112;
-  --panel: #171A1B;
-  --sunken: #1C201F;
+  --paper: #0A0A0B;
+  --panel: #141416;
+  --sunken: #1C1C1F;
 
-  --ink: #E9EBE7;
-  --ink-2: #C0C5C0;
-  --muted: #8B928D;
+  --ink: #FAFAFA;
+  --ink-2: #D4D4D8;
+  --muted: #8A8A92;
 
-  --line: #282D2D;
-  --line-strong: #3D4342;
+  --line: #27272A;
+  --line-strong: #3F3F46;
 
-  --accent: #E4704F;
-  --accent-wash: rgb(228 112 79 / 13%);
+  --accent: #5B8DEF;
+  --accent-wash: rgb(91 141 239 / 14%);
 
   --rim: rgb(255 255 255 / 7%);
-  --shadow: rgb(0 0 0 / 50%);
+  --shadow: rgb(0 0 0 / 55%);
 
-  --band: #E7E9E3;
-  --band-ink: #0F1417;
-  --band-muted: #5D6662;
-  --specular: rgb(15 20 23 / 7%);
+  --band: #FAFAFA;
+  --band-ink: #0A0A0B;
+  --band-muted: #71717A;
+  --specular: rgb(9 9 11 / 7%);
 }
 
 /* --- base ---------------------------------------------------- */
@@ -198,7 +198,6 @@ a { color: inherit; }
   font-family: var(--display);
   font-size: clamp(1.15rem, 1.7vw, 1.46rem);
   font-weight: 800;
-  font-stretch: 86%;
   letter-spacing: -0.032em;
   text-decoration: none;
   white-space: nowrap;
@@ -258,13 +257,12 @@ a { color: inherit; }
 }
 
 .hero__title {
-  max-width: 24ch;
+  max-width: 21ch;
   font-family: var(--display);
-  font-size: clamp(2.3rem, 6.4vw, 5.4rem);
+  font-size: clamp(2.6rem, 8.2vw, 7.2rem);
   font-weight: 800;
-  font-stretch: 84%;
-  line-height: 0.96;
-  letter-spacing: -0.042em;
+  line-height: 0.94;
+  letter-spacing: -0.05em;
 }
 
 .hero__title em {
@@ -419,7 +417,6 @@ a { color: inherit; }
   font-family: var(--display);
   font-size: clamp(2.4rem, 5.5vw, 4rem);
   font-weight: 800;
-  font-stretch: 84%;
   line-height: 1;
   letter-spacing: -0.045em;
   font-variant-numeric: tabular-nums;
@@ -446,7 +443,6 @@ a { color: inherit; }
   font-family: var(--display);
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 800;
-  font-stretch: 88%;
   line-height: 1;
   letter-spacing: -0.035em;
 }
@@ -531,7 +527,6 @@ a { color: inherit; }
   font-family: var(--display);
   font-size: clamp(1.3rem, 2.2vw, 1.7rem);
   font-weight: 700;
-  font-stretch: 92%;
   line-height: 1.08;
   letter-spacing: -0.028em;
 }
@@ -627,7 +622,6 @@ a { color: inherit; }
   font-family: var(--display);
   font-size: clamp(1.3rem, 2vw, 1.6rem);
   font-weight: 700;
-  font-stretch: 92%;
   line-height: 1.12;
   letter-spacing: -0.026em;
 }
@@ -697,7 +691,6 @@ a { color: inherit; }
   font-family: var(--display);
   font-size: clamp(2.2rem, 7vw, 5rem);
   font-weight: 800;
-  font-stretch: 84%;
   line-height: 0.95;
   letter-spacing: -0.045em;
 }

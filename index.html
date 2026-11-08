@@ -25,7 +25,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="styles/main.css">
 
 <script type="application/ld+json">
@@ -94,7 +94,7 @@
   <section class="band" aria-label="At a glance">
     <div class="wrap band__grid">
       <div class="stat">
-        <b class="stat__value" data-count-to="15" data-suffix="+">15+</b>
+        <b class="stat__value" data-count-to="16" data-suffix="+">16+</b>
         <span class="stat__label">Systems shipped<br>across product and contract work</span>
       </div>
       <div class="stat">
@@ -120,40 +120,65 @@
     </header>
 
     <div class="cards">
-      <article class="card reveal">
+      <article class="card card--wide reveal">
         <div class="card__top"><img class="card__logo" src="assets/logos/kigo.png" alt="Kigo logo" width="40" height="40" loading="lazy"><span class="card__num">01</span><span class="label">2025 —</span></div>
         <h3 class="card__title">Kigo</h3>
         <p class="card__role">Backend lead · equity</p>
         <p class="card__body">
-          A booking and tournament platform for sports clubs — reservations, club management,
-          tournament brackets, bar tabs, CRM and reporting, plus two Telegram bots for player
-          support and live tournament flow. I designed the domain model and API surface; the
-          team works from a published OpenAPI spec on a reviewed pull-request workflow.
+          A full booking and tournament ecosystem for sports clubs — court reservations, a
+          merchant panel for club owners, a coach marketplace with wallets and payouts, bar
+          POS, gift cards and subscription billing, plus three separate tournament systems:
+          club-run brackets, open-game matchmaking, and government-run competitions. Three
+          Telegram bots cover players, support and live tournament flow. I designed the domain
+          model and API surface across the platform; the team ships from a published OpenAPI
+          spec on a reviewed pull-request workflow.
         </p>
         <ul class="tech">
-          <li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Redis</li><li>aiogram</li><li>Docker</li>
+          <li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li><li>Channels</li><li>aiogram</li><li>Docker</li>
         </ul>
         <a class="card__link" href="https://kigo.uz" target="_blank" rel="noopener noreferrer">kigo.uz</a>
       </article>
 
+      <article class="card card--wide reveal">
+        <div class="card__top"><span class="card__num">02</span><span class="label">2026 —</span></div>
+        <h3 class="card__title">e-expert</h3>
+        <p class="card__role">Backend architect</p>
+        <p class="card__body">
+          A digital asset-valuation platform used mainly by banks for loan-collateral
+          appraisal, alongside government bodies and independent experts — real estate,
+          vehicles, and specialised machinery, each priced by its own market-data model. The
+          platform runs at 99.2% valuation accuracy with results in under 5 minutes, ISO
+          27001-compliant data security throughout, and an interactive map of valued objects
+          with regional market analytics. I own the backend: pricing engines pulling
+          government cadastral and registry data, re-architected to cut the heaviest
+          valuations from minutes to seconds, plus security hardening delivered against a
+          ministry-level review.
+        </p>
+        <ul class="tech">
+          <li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li><li>Nuxt</li><li>Vue</li>
+        </ul>
+        <a class="card__link" href="https://e-expert.uz" target="_blank" rel="noopener noreferrer">e-expert.uz</a>
+      </article>
+
       <article class="card reveal">
-        <div class="card__top"><img class="card__logo" src="assets/logos/lapka.png" alt="Lapka logo" width="40" height="40" loading="lazy"><span class="card__num">02</span><span class="label">2026</span></div>
+        <div class="card__top"><img class="card__logo" src="assets/logos/lapka.png" alt="Lapka logo" width="40" height="40" loading="lazy"><span class="card__num">03</span><span class="label">2026</span></div>
         <h3 class="card__title">Lapka</h3>
         <p class="card__role">Sole engineer</p>
         <p class="card__body">
           A pet-supplies marketplace living entirely inside Telegram. Customers order from a
-          Mini App, shops run their own catalogue from a web dashboard, and couriers are
-          dispatched through Yandex Delivery. Permissions are data-driven rather than
-          hard-coded, so a new staff role is a row and not a deploy.
+          Mini App with variant filtering, reviews and favourites; shops run their own
+          catalogue, orders and payments — Click, Payme, saved cards — from a web dashboard;
+          couriers are dispatched through Yandex Delivery with live claim tracking. Permissions
+          are data-driven rather than hard-coded, so a new staff role is a row and not a deploy.
         </p>
         <ul class="tech">
-          <li>Django</li><li>DRF</li><li>MinIO</li><li>Redis</li><li>Yandex Delivery</li>
+          <li>Django</li><li>DRF</li><li>MinIO</li><li>Redis</li><li>Click</li><li>Payme</li><li>Yandex Delivery</li>
         </ul>
         <a class="card__link" href="https://mylapka.uz" target="_blank" rel="noopener noreferrer">mylapka.uz</a>
       </article>
 
       <article class="card card--wide reveal">
-        <div class="card__top"><img class="card__logo" src="assets/logos/synapsse.png" alt="SYNAPSSE logo" width="40" height="40" loading="lazy"><span class="card__num">03</span><span class="label">2026</span></div>
+        <div class="card__top"><img class="card__logo" src="assets/logos/synapsse.png" alt="SYNAPSSE logo" width="40" height="40" loading="lazy"><span class="card__num">04</span><span class="label">2026</span></div>
         <h3 class="card__title">SYNAPSSE</h3>
         <p class="card__role">Creator · open source, MIT</p>
         <p class="card__body">
@@ -170,7 +195,7 @@
       </article>
 
       <article class="card reveal">
-        <div class="card__top"><img class="card__logo" src="assets/logos/usps.png" alt="Ben USPS logo" width="40" height="40" loading="lazy"><span class="card__num">04</span><span class="label">2026</span></div>
+        <div class="card__top"><img class="card__logo" src="assets/logos/usps.png" alt="Ben USPS logo" width="40" height="40" loading="lazy"><span class="card__num">05</span><span class="label">2026</span></div>
         <h3 class="card__title">Freight load board</h3>
         <p class="card__role">Sole engineer</p>
         <p class="card__body">
@@ -186,7 +211,7 @@
       </article>
 
       <article class="card reveal">
-        <div class="card__top"><img class="card__logo" src="assets/logos/sivi.png" alt="Sivi logo" width="40" height="40" loading="lazy"><span class="card__num">05</span><span class="label">2026</span></div>
+        <div class="card__top"><img class="card__logo" src="assets/logos/sivi.png" alt="Sivi logo" width="40" height="40" loading="lazy"><span class="card__num">06</span><span class="label">2026</span></div>
         <h3 class="card__title">Sivi</h3>
         <p class="card__role">Sole engineer</p>
         <p class="card__body">
@@ -203,7 +228,7 @@
       </article>
 
       <article class="card card--wide reveal">
-        <div class="card__top"><span class="card__num">06</span><span class="label">2026</span></div>
+        <div class="card__top"><span class="card__num">07</span><span class="label">2026</span></div>
         <h3 class="card__title">Visual builder for scripted AI call operators</h3>
         <p class="card__role">Self-initiated · sole engineer</p>
         <p class="card__body">
@@ -235,8 +260,8 @@
           <h3 class="role__title">Backend Developer</h3>
           <p class="role__place">UNICON UZ · Tashkent</p>
           <ul class="role__points">
-            <li>Main backend developer on a confidential B2B platform built with Django REST Framework, Celery, Docker and Kubernetes.</li>
-            <li>Owned the backend valuation engine — pricing real estate from its cadastral number by pulling government registry data and applying industry-standard comparative and cost appraisal methods.</li>
+            <li>Backend architect on <a href="https://e-expert.uz" target="_blank" rel="noopener noreferrer">e-expert.uz</a>, an asset-valuation platform used mainly by banks for loan-collateral appraisal, built with Django REST Framework, Celery, Docker and Kubernetes.</li>
+            <li>Owned the backend valuation engine — pricing real estate, vehicles and specialised machinery from cadastral and registry data, reaching 99.2% valuation accuracy with results in under 5 minutes.</li>
             <li>Re-architected the calculation path to run millions of computations per valuation, cutting the heaviest cases from minutes to seconds.</li>
             <li>Handled personal data under strict access controls, delivered against a ministry-level cybersecurity review that shaped the platform's architecture.</li>
           </ul>
