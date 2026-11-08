@@ -107,20 +107,7 @@ function initScrollSpy() {
   update();
 }
 
-/** Moves the specular highlight on the statistics band with the pointer. */
-function initSpecular() {
-  const band = document.querySelector('.band');
-  if (!band || prefersReducedMotion) return;
-
-  band.addEventListener('pointermove', (event) => {
-    const rect = band.getBoundingClientRect();
-    band.style.setProperty('--pointer-x', `${event.clientX - rect.left}px`);
-    band.style.setProperty('--pointer-y', `${event.clientY - rect.top}px`);
-  });
-}
-
 initProgressBar();
 initReveals();
 initCounters();
 initScrollSpy();
-initSpecular();

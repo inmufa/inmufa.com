@@ -21,11 +21,11 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#0A0A0D">
+<meta name="theme-color" content="#120F10">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="styles/main.css">
 
 <script type="application/ld+json">
@@ -53,10 +53,7 @@
 
 <header class="nav">
   <div class="wrap nav__bar">
-    <a class="nav__name" href="#top">
-      Inoyatullo Musayev
-      <span class="nav__status"><span class="nav__dot" aria-hidden="true"></span>Open to relocate</span>
-    </a>
+    <a class="nav__name" href="#top">Inoyatullo Musayev</a>
     <nav class="nav__links" aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
@@ -69,57 +66,21 @@
 
 <main id="top">
 
-  <section class="hero" aria-label="Introduction">
-    <div class="hero__field" aria-hidden="true">
-      <span class="hero__beam"></span>
-      <span class="hero__beam"></span>
-      <span class="hero__beam"></span>
-      <span class="hero__grid"></span>
-    </div>
-    <div class="wrap hero__inner">
-      <div class="hero__copy">
-        <p class="label hero__eyebrow">Python backend engineer — Tashkent</p>
-        <h1 class="hero__title" aria-label="I build the part that has to keep working.">
-          <span class="word-row">
-            <span class="word-in" style="--d:0">I</span>
-            <span class="word-in" style="--d:1">build</span>
-            <span class="word-in" style="--d:2">the</span>
-            <span class="word-in" style="--d:3">part</span>
-          </span>
-          <span class="word-row">
-            <span class="word-in" style="--d:4">that</span>
-            <span class="word-in" style="--d:5">has</span>
-            <span class="word-in" style="--d:6">to</span>
-            <span class="word-in word-in--accent" style="--d:7">keep</span>
-            <span class="word-in word-in--accent" style="--d:8">working.</span>
-          </span>
-        </h1>
-        <div class="hero__foot">
-          <p>
-            Four years of Python and Django in production — marketplaces, booking platforms
-            and real-time systems. I take a service from schema to deploy, then keep it running.
-          </p>
-          <div class="hero__cta">
-            <a class="button button--primary" href="mailto:inmusfa@gmail.com"><span>Email me</span></a>
-            <a class="button" href="https://github.com/inmufa" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
-          </div>
-        </div>
+  <section class="hero wrap" aria-label="Introduction">
+    <p class="label hero__eyebrow">Python backend engineer — Tashkent</p>
+    <h1 class="hero__title" aria-label="I build the part that has to keep working.">
+      <span class="mask"><span>I build the part</span></span>
+      <span class="mask"><span>that has to <em>keep working.</em></span></span>
+    </h1>
+    <div class="hero__foot">
+      <p>
+        Four years of Python and Django in production — marketplaces, booking platforms
+        and real-time systems. I take a service from schema to deploy, then keep it running.
+      </p>
+      <div class="hero__cta">
+        <a class="button button--primary" href="mailto:inmusfa@gmail.com"><span>Email me</span></a>
+        <a class="button" href="https://github.com/inmufa" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
       </div>
-
-      <aside class="hero__panel reveal" aria-label="At a glance">
-        <div class="hero__panel-bar">
-          <span></span><span></span><span></span>
-          <em>status.py</em>
-        </div>
-        <pre class="hero__panel-code"><code><span class="tok-key">engineer</span> = {
-  <span class="tok-key">"base"</span>: <span class="tok-str">"Tashkent, UZ"</span>,
-  <span class="tok-key">"experience"</span>: <span class="tok-num">4</span>,
-  <span class="tok-key">"stack"</span>: [<span class="tok-str">"Django"</span>, <span class="tok-str">"FastAPI"</span>,
-            <span class="tok-str">"PostgreSQL"</span>, <span class="tok-str">"Redis"</span>],
-  <span class="tok-key">"relocate"</span>: <span class="tok-bool">True</span>,
-  <span class="tok-key">"status"</span>: <span class="tok-str">"available"</span>,
-}</code></pre>
-      </aside>
     </div>
   </section>
 
@@ -159,7 +120,7 @@
     </header>
 
     <div class="cards">
-      <article class="card card--wide card--featured reveal">
+      <article class="card card--wide reveal">
         <div class="card__top"><img class="card__logo" src="assets/logos/kigo.png" alt="Kigo logo" width="40" height="40" loading="lazy"><span class="card__num">01</span><span class="label">2025 —</span></div>
         <h3 class="card__title">Kigo</h3>
         <p class="card__role">Backend lead · equity</p>
@@ -178,7 +139,7 @@
         <a class="card__link" href="https://kigo.uz" target="_blank" rel="noopener noreferrer">kigo.uz</a>
       </article>
 
-      <article class="card card--wide card--featured reveal">
+      <article class="card card--wide reveal">
         <div class="card__top"><span class="card__num">02</span><span class="label">2026 —</span></div>
         <h3 class="card__title">e-expert</h3>
         <p class="card__role">Backend architect</p>
