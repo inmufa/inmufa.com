@@ -10,41 +10,44 @@
 <link rel="canonical" href="https://inmufa.com/blog/">
 
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#120F10">
+<meta name="theme-color" content="#0F0D0E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Onest:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../styles/main.css?v=8">
 </head>
 
 <body>
 <div class="progress" aria-hidden="true"></div>
 
 <header class="nav">
-  <div class="wrap nav__bar">
+  <div class="nav__bar">
     <a class="nav__name" href="../">Inoyatullo Musayev</a>
-    <nav class="nav__links" aria-label="Sections">
-      <a href="../#work">Home</a>
-      <a href="../work/">Work</a>
-      <a class="is-current" href="./">Blog</a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="../#work">Work</a>
+      <a href="../#experience">Experience</a>
       <a href="../#contact">Contact</a>
-      <a class="nav__mobile" href="mailto:inmusfa@gmail.com">Email</a>
+      <a class="is-current" aria-current="true" href="./">Blog</a>
     </nav>
+    <a class="nav__cta" href="../cv/" target="_blank" rel="noopener">Résumé</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
 <main>
   <section class="section wrap" aria-labelledby="blog-title">
+    <a class="text-button blog__back" href="../"><span>← Back</span></a>
     <header class="section__head is-visible">
-      <span class="label">Writing</span>
-      <h2 id="blog-title">Notes from the backend</h2>
+      <span class="label">Notes · News · Stories</span>
+      <h2 id="blog-title">Blog</h2>
       <div class="section__rule" style="transform:none"></div>
     </header>
 
     <ul class="postlist">
       <li>
         <a class="postlist__item" href="orms-and-money/">
+          <img class="postlist__cover" src="../assets/blog/orms-and-money.svg" alt="" width="1200" height="630" loading="lazy">
           <span class="label postlist__date">2026-11-08</span>
           <h3 class="postlist__title">Why I stopped trusting an ORM with money</h3>
           <p class="postlist__excerpt">What building a valuation engine that banks rely on taught me about decimals, float drift, and where an ORM's convenience turns into a liability.</p>
@@ -52,6 +55,7 @@
       </li>
       <li>
         <a class="postlist__item" href="api-before-the-team/">
+          <img class="postlist__cover" src="../assets/blog/api-before-the-team.svg" alt="" width="1200" height="630" loading="lazy">
           <span class="label postlist__date">2026-10-22</span>
           <h3 class="postlist__title">Designing the API before the team exists</h3>
           <p class="postlist__excerpt">Kigo's backend shipped an OpenAPI spec before most of the endpoints behind it existed. Here's why that ordering, not the framework, is what kept the team moving fast.</p>
@@ -59,6 +63,7 @@
       </li>
       <li>
         <a class="postlist__item" href="permissions-as-data/">
+          <img class="postlist__cover" src="../assets/blog/permissions-as-data.svg" alt="" width="1200" height="630" loading="lazy">
           <span class="label postlist__date">2026-09-30</span>
           <h3 class="postlist__title">Permissions should be a row, not a deploy</h3>
           <p class="postlist__excerpt">Hard-coded roles are the first thing that breaks once a marketplace has real staff. What changed when I moved Lapka's permission checks into the database.</p>
@@ -72,5 +77,6 @@
   <span>Inoyatullo Musayev</span>
   <span>Backend engineer · Tashkent</span>
 </footer>
+<script src="../scripts/main.js?v=8" defer></script>
 </body>
 </html>

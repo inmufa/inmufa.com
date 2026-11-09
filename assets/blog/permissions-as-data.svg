@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="">
+<rect width="1200" height="630" fill="#1B1718"/>
+<g font-family="ui-monospace, Menlo, monospace" font-size="26" fill="#A0978F" text-anchor="middle">
+<text x="520" y="120">admin</text><text x="720" y="120">staff</text><text x="920" y="120">viewer</text>
+</g>
+<g font-family="ui-monospace, Menlo, monospace" font-size="28" fill="#CFC7C3">
+<text x="80" y="240">view_report</text><text x="80" y="340">create_valuation</text><text x="80" y="440">delete_object</text><text x="80" y="540">export_data</text>
+</g>
+<g fill="#B8505A">
+<circle cx="520" cy="230" r="16"/><circle cx="720" cy="230" r="16"/><circle cx="920" cy="230" r="16"/>
+<circle cx="520" cy="330" r="16"/><circle cx="720" cy="330" r="16"/>
+<circle cx="520" cy="430" r="16"/>
+<circle cx="520" cy="530" r="16"/><circle cx="720" cy="530" r="16"/>
+</g>
+<g fill="#40393A"><circle cx="920" cy="330" r="16"/><circle cx="720" cy="430" r="16"/><circle cx="920" cy="430" r="16"/><circle cx="920" cy="530" r="16"/></g>
+</svg>

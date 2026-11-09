@@ -10,36 +10,40 @@
 <link rel="canonical" href="https://inmufa.com/blog/orms-and-money/">
 
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#120F10">
+<meta name="theme-color" content="#0F0D0E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Onest:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../styles/main.css?v=8">
 </head>
 
 <body>
 <div class="progress" aria-hidden="true"></div>
 
 <header class="nav">
-  <div class="wrap nav__bar">
+  <div class="nav__bar">
     <a class="nav__name" href="../../">Inoyatullo Musayev</a>
-    <nav class="nav__links" aria-label="Sections">
-      <a href="../../#work">Home</a>
-      <a href="../../work/">Work</a>
-      <a href="../">Blog</a>
+    <nav class="nav__links" id="nav-links" aria-label="Main">
+      <a href="../../#work">Work</a>
+      <a href="../../#experience">Experience</a>
       <a href="../../#contact">Contact</a>
-      <a class="nav__mobile" href="mailto:inmusfa@gmail.com">Email</a>
+      <a class="is-current" aria-current="true" href="../">Blog</a>
     </nav>
+    <a class="nav__cta" href="../../cv/" target="_blank" rel="noopener">Résumé</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
 <main>
   <article class="section wrap post">
+    <a class="text-button post__back post__back--top" href="../"><span>← All posts</span></a>
     <header class="post__head">
       <span class="label">2026-11-08 · 6 min read</span>
       <h1 class="post__title">Why I stopped trusting an ORM with money</h1>
     </header>
+
+    <img class="post__cover" src="../../assets/blog/orms-and-money.svg" alt="" width="1200" height="630">
 
     <div class="post__body">
       <p>
@@ -97,7 +101,7 @@
       </p>
     </div>
 
-    <a class="button post__back" href="../"><span>← All posts</span></a>
+    <a class="text-button post__back" href="../"><span>← All posts</span></a>
   </article>
 </main>
 
@@ -105,5 +109,6 @@
   <span>Inoyatullo Musayev</span>
   <span>Backend engineer · Tashkent</span>
 </footer>
+<script src="../../scripts/main.js?v=8" defer></script>
 </body>
 </html>

@@ -21,12 +21,12 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#120F10">
+<meta name="theme-color" content="#0F0D0E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Onest:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles/main.css?v=8">
 
 <script type="application/ld+json">
 {
@@ -52,63 +52,68 @@
 <div class="progress" aria-hidden="true"></div>
 
 <header class="nav">
-  <div class="wrap nav__bar">
+  <div class="nav__bar">
     <a class="nav__name" href="#top">Inoyatullo Musayev</a>
-    <nav class="nav__links" aria-label="Sections">
+    <nav class="nav__links" id="nav-links" aria-label="Main">
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
-      <a href="#stack">Stack</a>
-      <a href="blog/">Blog</a>
       <a href="#contact">Contact</a>
-      <a class="nav__mobile" href="mailto:inmusfa@gmail.com">Email</a>
+      <a href="blog/">Blog</a>
     </nav>
+    <a class="nav__cta" href="cv/" target="_blank" rel="noopener">Résumé</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
 <main id="top">
 
   <section class="hero wrap" aria-label="Introduction">
-    <p class="label hero__eyebrow">Python backend engineer — Tashkent</p>
-    <h1 class="hero__title" aria-label="I build the part that has to keep working.">
-      <span class="mask"><span>I build the part</span></span>
-      <span class="mask"><span>that has to <em>keep working.</em></span></span>
-    </h1>
-    <div class="hero__foot">
-      <p>
-        Four years of Python and Django in production — marketplaces, booking platforms
-        and real-time systems. I take a service from schema to deploy, then keep it running.
-      </p>
-      <div class="hero__cta">
-        <a class="button button--primary" href="mailto:inmusfa@gmail.com"><span>Email me</span></a>
-        <a class="button" href="https://github.com/inmufa" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
+    <div class="hero__main">
+      <div>
+        <p class="label hero__eyebrow">Python backend engineer — Tashkent</p>
+        <h1 class="hero__title" aria-label="Python backends, from schema to production.">
+          <span class="line"><span class="mask"><span style="--i:0">Python</span></span> <span class="mask"><span style="--i:1">backends,</span></span></span>
+          <span class="line"><span class="mask"><span style="--i:2">from</span></span> <span class="mask"><span style="--i:3">schema</span></span> <span class="mask"><span style="--i:4">to</span></span> <span class="mask"><span style="--i:5"><em>production.</em></span></span></span>
+        </h1>
       </div>
+      <div class="hero__foot">
+        <p>
+          Four years of Python and Django in production — marketplaces, booking platforms
+          and real-time systems. Based in Tashkent, open to relocate.
+        </p>
+        <div class="hero__cta">
+          <a class="button button--primary" href="cv/" target="_blank" rel="noopener"><span>Résumé</span></a>
+          <a class="button" href="mailto:inmusfa@gmail.com"><span>Email me</span></a>
+          <a class="button" href="https://github.com/inmufa" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
+        </div>
+        <p class="label hero__proof">Shipped · E-Expert · Kigo · SYNAPSSE</p>
+      </div>
+    </div>
+    <div class="hero__photo">
+      <img src="assets/portrait.jpg" alt="Inoyatullo Musayev" width="600" height="700">
+      <span class="hero__tag">Inoyatullo Musayev</span>
     </div>
   </section>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>Python</span><span>Django</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Celery</span><span>Docker</span><span>Nginx</span><span>Pytest</span><span>OpenAPI</span>
-      <span>Python</span><span>Django</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Celery</span><span>Docker</span><span>Nginx</span><span>Pytest</span><span>OpenAPI</span>
-    </div>
-  </div>
-
   <section class="band" aria-label="At a glance">
-    <div class="wrap band__grid">
-      <div class="stat">
-        <b class="stat__value" data-count-to="16" data-suffix="+">16+</b>
-        <span class="stat__label">Systems shipped<br>across product and contract work</span>
+    <div class="wrap proof">
+      <div class="proof__lead reveal">
+        <b class="proof__num">99.2%</b>
+        <p class="proof__text">asset valuation accuracy, results in under five minutes — the E-Expert engine I own, used by banks for loan-collateral appraisal.</p>
       </div>
-      <div class="stat">
-        <b class="stat__value" data-count-to="4" data-suffix="+">4+</b>
-        <span class="stat__label">Years in production<br>Python, Django, PostgreSQL</span>
-      </div>
-      <div class="stat">
-        <b class="stat__value" data-count-to="1" data-prefix="#">#1</b>
-        <span class="stat__label">All-time academy record<br>fastest C-track completion</span>
-      </div>
-      <div class="stat">
-        <b class="stat__value" data-count-to="280" data-suffix="+">280+</b>
-        <span class="stat__label">Students taught<br>backend engineering</span>
+      <div class="band__grid">
+        <div class="stat">
+          <b class="stat__value" data-count-to="8" data-suffix="">8</b>
+          <span class="stat__label">Systems shipped</span>
+        </div>
+        <div class="stat">
+          <b class="stat__value" data-count-to="4" data-suffix="+">4+</b>
+          <span class="stat__label">Years in production</span>
+        </div>
+        <div class="stat">
+          <b class="stat__value" data-count-to="280" data-suffix="+">280+</b>
+          <span class="stat__label">Students taught</span>
+        </div>
       </div>
     </div>
   </section>
@@ -122,177 +127,206 @@
 
     <div class="cards">
       <article class="card card--wide reveal">
-        <div class="card__top"><img class="card__logo" src="assets/logos/kigo.png" alt="Kigo logo" width="40" height="40" loading="lazy"><span class="card__num">01</span><span class="label">2025 —</span></div>
+        <div class="card__top"><img class="card__logo" src="assets/logos/kigo.png" alt="Kigo logo" width="40" height="40"><span class="card__num">01</span><span class="label">2025 —</span></div>
         <h3 class="card__title">Kigo</h3>
         <p class="card__role">Backend lead · equity</p>
-        <p class="card__body">
-          A full booking and tournament ecosystem for sports clubs - court reservations, a
-          merchant panel for club owners, a coach marketplace with wallets and payouts, bar
-          POS, gift cards and subscription billing, plus three separate tournament systems:
-          club-run brackets, open-game matchmaking, and government-run competitions. Three
-          Telegram bots cover players, support and live tournament flow. I designed the domain
-          model and API surface across the platform; the team ships from a published OpenAPI
-          spec on a reviewed pull-request workflow.
+        <p class="card__out">Booking and tournament platform for sports clubs — one OpenAPI-specified backend behind the web apps and three Telegram bots.</p>
+        <div class="card__more"><div><p class="card__body">
+          Booking and tournament ecosystem for sports clubs — merchant panel, coach
+          marketplace, bar POS and three tournament systems, three Telegram bots. I own the
+          domain model and API surface; the team ships against a published OpenAPI spec.
         </p>
         <ul class="tech">
           <li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li><li>Channels</li><li>aiogram</li><li>Docker</li>
-        </ul>
+        </ul></div></div>
         <a class="card__link" href="https://kigo.uz" target="_blank" rel="noopener noreferrer">kigo.uz</a>
       </article>
 
-      <article class="card card--wide reveal">
-        <div class="card__top"><span class="card__num">02</span><span class="label">2026 —</span></div>
-        <h3 class="card__title">e-expert</h3>
+      <article class="card reveal">
+        <div class="card__top"><img class="card__logo" src="assets/logos/e-expert.png" alt="E-Expert logo" width="40" height="40"><span class="card__num">02</span><span class="label">2026 —</span></div>
+        <h3 class="card__title">E-Expert</h3>
         <p class="card__role">Backend architect</p>
-        <p class="card__body">
-          A digital asset-valuation platform used mainly by banks for loan-collateral
-          appraisal, alongside government bodies and independent experts - real estate,
-          vehicles, and specialised machinery, each priced by its own market-data model. The
-          platform runs at 99.2% valuation accuracy with results in under 5 minutes, ISO
-          27001-compliant data security throughout, and an interactive map of valued objects
-          with regional market analytics. I own the backend: pricing engines pulling
-          government cadastral and registry data, re-architected to cut the heaviest
-          valuations from minutes to seconds, plus security hardening delivered against a
-          ministry-level review.
+        <p class="card__out">99.2% valuation accuracy in under five minutes; the heaviest valuations cut from minutes to seconds.</p>
+        <div class="card__more"><div><p class="card__body">
+          Asset-valuation platform banks use for loan-collateral appraisal — 99.2% accuracy,
+          results under 5 minutes. I own the pricing engines and cut the heaviest valuations
+          from minutes to seconds, delivered against a ministry-level security review.
         </p>
         <ul class="tech">
           <li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li><li>Nuxt</li><li>Vue</li>
-        </ul>
+        </ul></div></div>
         <a class="card__link" href="https://e-expert.uz" target="_blank" rel="noopener noreferrer">e-expert.uz</a>
       </article>
 
-      <article class="card card--wide reveal">
-        <div class="card__top"><img class="card__logo" src="assets/logos/synapsse.png" alt="SYNAPSSE logo" width="40" height="40" loading="lazy"><span class="card__num">03</span><span class="label">2026</span></div>
+      <article class="card reveal">
+        <div class="card__top"><img class="card__logo" src="assets/logos/synapsse.png" alt="SYNAPSSE logo" width="40" height="40"><span class="card__num">03</span><span class="label">2026</span></div>
         <h3 class="card__title">SYNAPSSE</h3>
         <p class="card__role">Creator · open source, MIT</p>
-        <p class="card__body">
-          A local-first memory graph for AI agents. An async Python daemon over embedded SQLite
-          exposes itself through the Model Context Protocol and renders the resulting graph as
-          an interactive WebGL canvas. Retrieval is hybrid — FTS5 keyword search alongside
-          vector similarity from ONNX embeddings running locally — so recall costs a fraction
-          of replaying a transcript, and nothing leaves the machine.
+        <p class="card__out">Open-source, local-first memory for AI agents — nothing leaves the machine.</p>
+        <div class="card__more"><div><p class="card__body">
+          Local-first memory graph for AI agents — an async Python daemon over SQLite,
+          hybrid FTS5 + vector retrieval, rendered as an interactive WebGL canvas. Nothing
+          leaves the machine.
         </p>
         <ul class="tech">
           <li>Python</li><li>FastAPI</li><li>SQLite · WAL</li><li>sqlite-vec</li><li>ONNX</li><li>MCP</li><li>WebGL</li>
-        </ul>
+        </ul></div></div>
         <a class="card__link" href="https://synapsse.io" target="_blank" rel="noopener noreferrer">synapsse.io</a>
       </article>
 
       <article class="card card--wide reveal">
-        <div class="card__top"><span class="card__num">04</span><span class="label">2026 —</span></div>
+        <div class="card__top"><img class="card__logo" src="assets/logos/mdc-group.png" alt="MDC Group logo" width="40" height="40"><span class="card__num">04</span><span class="label">2026 —</span></div>
         <h3 class="card__title">MDC Group</h3>
         <p class="card__role">Founder · sole engineer</p>
-        <p class="card__body">
-          A small IT agency I started, built end to end: a Next.js landing with a lead form,
-          a FastAPI service that saves each lead before notifying admins and retries failed
-          Telegram sends on its own, and an aiogram support bot so clients can leave a request
-          by chat instead of a form. All of it sits behind a shared-server nginx router I
-          designed that reads the TLS SNI and passes raw connections through by domain, so
-          each product keeps its own compose stack and certs without touching the others.
+        <p class="card__out">My own IT agency — one shared server routes every product to its own stack by TLS SNI.</p>
+        <div class="card__more"><div><p class="card__body">
+          Small IT agency I started, built end to end — Next.js landing, FastAPI lead
+          service, aiogram support bot, all behind a shared-server nginx router I designed
+          that routes by TLS SNI so each product keeps its own stack.
         </p>
         <ul class="tech">
           <li>Next.js</li><li>FastAPI</li><li>PostgreSQL</li><li>SQLAlchemy</li><li>aiogram</li><li>Docker</li><li>nginx</li>
-        </ul>
+        </ul></div></div>
         <a class="card__link" href="https://mdcgroup.uz" target="_blank" rel="noopener noreferrer">mdcgroup.uz</a>
       </article>
+      <div class="cards__extra" id="more-work"><div>
+      <article class="card">
+        <div class="card__top"><img class="card__logo" src="assets/logos/lapka.png" alt="Lapka logo" width="40" height="40"><span class="card__num"></span><span class="label">2026</span></div>
+        <h3 class="card__title">Lapka</h3>
+        <p class="card__role">Sole engineer</p>
+        <p class="card__out">Pet-supplies marketplace inside Telegram, with Click and Payme payments and courier delivery.</p>
+        <div class="card__more"><div><p class="card__body">
+          Pet-supplies marketplace inside Telegram — Mini App storefront, shop dashboard with Click and Payme, Yandex Delivery couriers, and permissions stored as data, not code.
+        </p>
+        <ul class="tech">
+          <li>Django</li><li>DRF</li><li>MinIO</li><li>Redis</li><li>Click</li><li>Payme</li><li>Yandex Delivery</li>
+        </ul></div></div>
+        <a class="card__link" href="https://mylapka.uz" target="_blank" rel="noopener noreferrer">mylapka.uz</a>
+      </article>
+      <article class="card">
+        <div class="card__top"><img class="card__logo" src="assets/logos/usps.png" alt="Ben USPS logo" width="40" height="40"><span class="card__num"></span><span class="label">2026</span></div>
+        <h3 class="card__title">Freight load board</h3>
+        <p class="card__role">Sole engineer</p>
+        <p class="card__out">Real-time load board — new loads reach couriers within seconds.</p>
+        <div class="card__more"><div><p class="card__body">
+          Real-time load board for USPS contract couriers — scrapers, Redis dedupe, Telegram channel and WebSocket push within seconds, behind nginx with automated certificates.
+        </p>
+        <ul class="tech">
+          <li>Django Channels</li><li>Daphne</li><li>WebSockets</li><li>PostgreSQL</li><li>nginx</li>
+        </ul></div></div>
+        <a class="card__link" href="https://usps.uz" target="_blank" rel="noopener noreferrer">usps.uz</a>
+      </article>
+      <article class="card">
+        <div class="card__top"><img class="card__logo" src="assets/logos/sivi.png" alt="Sivi logo" width="40" height="40"><span class="card__num"></span><span class="label">2026</span></div>
+        <h3 class="card__title">Sivi</h3>
+        <p class="card__role">Sole engineer</p>
+        <p class="card__out">AI career assistant matching vacancies across ten job platforms and seventeen channels.</p>
+        <div class="card__more"><div><p class="card__body">
+          AI career assistant for the Uzbek job market on Telegram — resume builder with PDF export, and pgvector vacancy matching over ten job platforms and seventeen channels.
+        </p>
+        <ul class="tech">
+          <li>Django</li><li>Celery</li><li>PostgreSQL · pgvector</li><li>Redis</li><li>Embeddings</li><li>Click</li>
+        </ul></div></div>
+        <a class="card__link" href="https://sivi.uz" target="_blank" rel="noopener noreferrer">sivi.uz</a>
+      </article>
+      <article class="card">
+        <div class="card__top"><img class="card__logo" src="assets/logos/klikz.svg" alt="klikz logo" width="40" height="40"><span class="card__num"></span><span class="label">2026</span></div>
+        <h3 class="card__title">klikz</h3>
+        <p class="card__role">Sole engineer</p>
+        <p class="card__out">Gaming-peripherals shop with totals, stock and delivery computed server-side.</p>
+        <div class="card__more"><div><p class="card__body">
+          Gaming-peripherals shop, storefront to backend — React storefront and staff admin on a Django API that computes totals, stock and delivery server-side and posts each order to Telegram.
+        </p>
+        <ul class="tech">
+          <li>Django</li><li>DRF</li><li>React</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li>
+        </ul></div></div>
+        <a class="card__link" href="https://klikz.uz" target="_blank" rel="noopener noreferrer">klikz.uz</a>
+      </article>
+      </div></div>
     </div>
 
-    <a class="button work__more" href="work/"><span>See all 8 projects</span></a>
+    <button class="text-button work__more" type="button" aria-expanded="false" aria-controls="more-work" data-more="Show more" data-less="Show less"><span>Show more</span></button>
   </section>
 
-  <section class="section wrap" id="experience" aria-labelledby="experience-title">
+  <section class="wrap how reveal" aria-label="How I work">
+    <div><span class="label">01</span><h3>Schema first</h3><p>The data model decides everything downstream, so it gets designed before any endpoint.</p></div>
+    <div><span class="label">02</span><h3>Spec before code</h3><p>The API contract is written and reviewed first; the implementation is checked against it.</p></div>
+    <div><span class="label">03</span><h3>Ship, then watch</h3><p>Deploys are automated and monitored. Shipping is the start of owning it.</p></div>
+  </section>
+
+  <section class="section wrap" id="writing" aria-labelledby="writing-title">
+    <header class="section__head reveal">
+      <span class="label">Notes · News · Stories</span>
+      <h2 id="writing-title">Blog</h2>
+      <div class="section__rule"></div>
+    </header>
+    <ul class="postlist reveal">
+      <li><a class="postlist__item" href="blog/orms-and-money/"><span class="label postlist__date">2026-11-08</span><h3 class="postlist__title">Why I stopped trusting an ORM with money</h3><p class="postlist__excerpt">What building a valuation engine that banks rely on taught me about decimals, float drift, and where an ORM's convenience turns into a liability.</p></a></li>
+      <li><a class="postlist__item" href="blog/api-before-the-team/"><span class="label postlist__date">2026-10-22</span><h3 class="postlist__title">Designing the API before the team exists</h3><p class="postlist__excerpt">Kigo's backend shipped an OpenAPI spec before most of the endpoints behind it existed. Here's why that ordering kept the team moving fast.</p></a></li>
+      <li><a class="postlist__item" href="blog/permissions-as-data/"><span class="label postlist__date">2026-09-30</span><h3 class="postlist__title">Permissions should be a row, not a deploy</h3><p class="postlist__excerpt">Hard-coded roles are the first thing that breaks once a marketplace has real staff. What changed when Lapka's permission checks moved into the database.</p></a></li>
+    </ul>
+    <a class="text-button work__more" href="blog/"><span>All posts</span></a>
+  </section>
+
+  <section class="section section--band wrap" id="experience" aria-labelledby="experience-title">
     <header class="section__head reveal">
       <span class="label">Experience</span>
       <h2 id="experience-title">Where I've done it</h2>
       <div class="section__rule"></div>
     </header>
 
-    <div class="timeline reveal">
-      <article class="role">
-        <div class="role__when">Mar 2026 —<span class="role__kind">Engineering</span></div>
-        <div class="role__detail">
-          <h3 class="role__title">Backend Developer</h3>
-          <p class="role__place">UNICON UZ · Tashkent</p>
-          <ul class="role__points">
-            <li>Backend architect on <a href="https://e-expert.uz" target="_blank" rel="noopener noreferrer">e-expert.uz</a>, an asset-valuation platform used mainly by banks for loan-collateral appraisal, built with Django REST Framework, Celery, Docker and Kubernetes.</li>
-            <li>Owned the backend valuation engine - pricing real estate, vehicles and specialised machinery from cadastral and registry data, reaching 99.2% valuation accuracy with results in under 5 minutes.</li>
-            <li>Re-architected the calculation path to run millions of computations per valuation, cutting the heaviest cases from minutes to seconds.</li>
-            <li>Handled personal data under strict access controls, delivered against a ministry-level cybersecurity review that shaped the platform's architecture.</li>
-          </ul>
-        </div>
-      </article>
+    <div class="exp reveal">
+      <h3 class="exp__label">Engineering</h3>
+      <ol class="rows">
+          <li class="row">
+            <span class="row__when">Mar 2026 — now</span>
+            <div><h4 class="row__title">Backend Developer</h4><p class="row__place">UNICON UZ · Tashkent</p><p class="row__line">I own the <a href="https://e-expert.uz" target="_blank" rel="noopener noreferrer">E-Expert</a> valuation backend: pricing engines for real estate, vehicles and machinery at 99.2% accuracy.</p></div>
+            <span class="row__logos"><img class="row__logo row__logo--white" src="assets/logos/unicon.svg" alt="" width="22" height="22"></span>
+          </li>
+          <li class="row">
+            <span class="row__when">Sep 2024 — Feb 2025</span>
+            <div><h4 class="row__title">Backend Developer</h4><p class="row__place">Cybernet AI · Tashkent</p><p class="row__line">I built the FastAPI services behind LLM voice bots for banks and cut document lookup time by 60%.</p></div>
+            <span class="row__logos"><img class="row__logo row__logo--white row__logo--pad" src="assets/logos/cybernet.svg" alt="" width="22" height="22"></span>
+          </li>
+          <li class="row">
+            <span class="row__when">Jan 2023 — Sep 2023</span>
+            <div><h4 class="row__title">Python Developer, Internship</h4><p class="row__place">VEON AdTech · Tashkent</p><p class="row__line">I automated data workflows over 20M+ customer records for retention modelling.</p></div>
+            <span class="row__logos"><img class="row__logo" src="assets/logos/veon.png" alt="" width="22" height="22"></span>
+          </li>
+      </ol>
 
-      <article class="role">
-        <div class="role__when">Apr 2025 — Feb 2026<span class="role__kind">Teaching</span></div>
-        <div class="role__detail">
-          <h3 class="role__title">Backend Development Instructor</h3>
-          <p class="role__place">Farobiy Academy · Tashkent</p>
-          <ul class="role__points">
-            <li>Taught Python, Django, FastAPI and PostgreSQL to more than 250 students, with a curriculum covering REST APIs, database optimisation and deployment practice.</li>
-            <li>Ran code reviews and mentored students on production-ready backend design patterns.</li>
+      <div class="exp__side">
+        <div>
+          <h3 class="exp__label">Teaching</h3>
+          <ul class="rows">
+          <li class="row">
+            <span class="row__when">2025 — 2026</span>
+            <div><h4 class="row__title">Backend Instructor</h4><p class="row__place">Farobiy Academy</p><p class="row__line">Taught 250+ students Python, Django and FastAPI.</p></div>
+            <span class="row__logos"><img class="row__logo row__logo--full" src="assets/logos/farobiy.png" alt="Farobiy Academy" width="44" height="44"></span>
+          </li>
+          <li class="row">
+            <span class="row__when">2023 — 2024</span>
+            <div><h4 class="row__title">Backend Mentor</h4><p class="row__place">Astrum IT Academy</p><p class="row__line">Mentored 30+ students and raised programme completion by 20%.</p></div>
+            <span class="row__logos"><img class="row__logo row__logo--white" src="assets/logos/astrum.png" alt="Astrum IT Academy" width="44" height="44"></span>
+          </li>
           </ul>
         </div>
-      </article>
-
-      <article class="role">
-        <div class="role__when">Sep 2024 — Feb 2025<span class="role__kind">Engineering</span></div>
-        <div class="role__detail">
-          <h3 class="role__title">Backend Developer</h3>
-          <p class="role__place">Cybernet AI · Tashkent</p>
-          <ul class="role__points">
-            <li>Built FastAPI microservices for LLM-powered voice bots in banking automation, with JWT/OAuth2 security, request validation and OpenAPI documentation throughout.</li>
-            <li>Improved document lookup performance by 60% through PostgreSQL query optimisation, indexing and Redis caching.</li>
-            <li>Added centralised error-handling middleware with structured logging for production stability.</li>
+        <div>
+          <h3 class="exp__label">Education</h3>
+          <ul class="rows">
+          <li class="row">
+            <span class="row__when">2023 — 2028</span>
+            <div><h4 class="row__title">BSc Digital Economy</h4><p class="row__place">Tashkent University of Information Technologies</p><p class="row__line">Studying part-time alongside full-time work.</p></div>
+            <span class="row__logos"><img class="row__logo row__logo--white row__logo--seal" src="assets/logos/tuit.png" alt="" width="22" height="22"></span>
+          </li>
+          <li class="row">
+            <span class="row__when">2022 — 2023</span>
+            <div><h4 class="row__title">Software Engineering</h4><p class="row__place">Astrum IT Academy · Qwasar Silicon Valley Program</p><p class="row__line">All-time academy record for the fastest C-track completion.</p></div>
+            <span class="row__logos"><img class="row__logo row__logo--white row__logo--pad" src="assets/logos/qwasar.png" alt="Qwasar Silicon Valley" width="44" height="44"></span>
+          </li>
           </ul>
         </div>
-      </article>
-
-      <article class="role">
-        <div class="role__when">Sep 2023 — Sep 2024<span class="role__kind">Teaching</span></div>
-        <div class="role__detail">
-          <h3 class="role__title">Backend Engineering Mentor</h3>
-          <p class="role__place">Astrum IT Academy · Tashkent</p>
-          <ul class="role__points">
-            <li>Standardised the backend curriculum for 30+ students across Python, Django and REST API design, raising programme completion by 20%.</li>
-            <li>Led 50+ code reviews focused on algorithmic efficiency, clean architecture and production-ready Python.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="role">
-        <div class="role__when">Jan 2023 — Sep 2023<span class="role__kind">Engineering</span></div>
-        <div class="role__detail">
-          <h3 class="role__title">Python Developer, Internship</h3>
-          <p class="role__place">VEON AdTech · Tashkent</p>
-          <ul class="role__points">
-            <li>Automated data-processing workflows in Python, SQL and Pandas, analysing customer behaviour across 20M+ records for retention modelling.</li>
-            <li>Built queries and scripts for ad performance analytics supporting real-time targeting and campaign optimisation.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="role">
-        <div class="role__when">2022 — 2023<span class="role__kind">Programme</span></div>
-        <div class="role__detail">
-          <h3 class="role__title">Software Engineering · <b>all-time academy record</b></h3>
-          <p class="role__place">Astrum IT Academy — Qwasar Silicon Valley Program</p>
-          <ul class="role__points">
-            <li>Set the academy's all-time record for fastest completion of the Software Engineering C track.</li>
-            <li>Completed 60+ projects in C and Assembly focused on memory safety and algorithmic optimisation.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="role">
-        <div class="role__when">2023 — 2028<span class="role__kind">Education</span></div>
-        <div class="role__detail">
-          <h3 class="role__title">BSc Digital Economy</h3>
-          <p class="role__place">Tashkent University of Information Technologies</p>
-          <ul class="role__points">
-            <li>Studied part-time alongside full-time engineering work.</li>
-          </ul>
-        </div>
-      </article>
+      </div>
     </div>
   </section>
 
@@ -302,33 +336,14 @@
       <h2 id="stack-title">What I reach for</h2>
       <div class="section__rule"></div>
     </header>
-
-    <div class="stack reveal">
-      <div class="stack__cell">
-        <h4>Languages</h4>
-        <ul><li>Python</li><li>SQL</li><li>C · C++</li><li>JavaScript</li></ul>
-      </div>
-      <div class="stack__cell">
-        <h4>Backend</h4>
-        <ul><li>Django · DRF</li><li>FastAPI</li><li>Microservices</li><li>Celery</li><li>aiogram</li><li>REST · OpenAPI</li></ul>
-      </div>
-      <div class="stack__cell">
-        <h4>Data</h4>
-        <ul><li>PostgreSQL</li><li>Redis</li><li>Weaviate · pgvector</li><li>SQLite · FTS5</li></ul>
-      </div>
-      <div class="stack__cell">
-        <h4>Operations</h4>
-        <ul><li>Docker</li><li>Kubernetes</li><li>Nginx · Linux</li><li>CI/CD</li><li>AWS</li></ul>
-      </div>
-      <div class="stack__cell">
-        <h4>Quality</h4>
-        <ul><li>Pytest</li><li>ruff · uv</li><li>Code review</li><li>JWT · OAuth2</li></ul>
-      </div>
-      <div class="stack__cell">
-        <h4>Languages spoken</h4>
-        <ul><li>Uzbek — native</li><li>English — C1</li><li>Russian — B2</li><li>Arabic — A2</li><li>German — A1</li><li>French — A1</li></ul>
-      </div>
-    </div>
+    <dl class="skills reveal">
+      <div class="skills__row"><dt>Backend</dt><dd><ul class="chips"><li>Python</li><li>Django · DRF</li><li>FastAPI</li><li>Celery</li><li>aiogram</li><li>REST · OpenAPI</li></ul></dd></div>
+      <div class="skills__row"><dt>AI tooling</dt><dd><ul class="chips"><li>Claude Code</li><li>Codex</li><li>MCP</li><li>Higgsfield</li><li>n8n</li></ul></dd></div>
+      <div class="skills__row"><dt>Data</dt><dd><ul class="chips"><li>PostgreSQL</li><li>Redis</li><li>pgvector</li><li>SQLite</li></ul></dd></div>
+      <div class="skills__row"><dt>Operations</dt><dd><ul class="chips"><li>Docker</li><li>Kubernetes</li><li>nginx</li><li>CI/CD</li><li>AWS</li></ul></dd></div>
+      <div class="skills__row"><dt>Quality</dt><dd><ul class="chips"><li>Pytest</li><li>ruff · uv</li><li>Code review</li></ul></dd></div>
+    </dl>
+    <p class="stack__spoken reveal"><span class="label">Languages</span>Uzbek native · English C1 · Russian B2 · Arabic A2 · German A1 · French A1</p>
   </section>
 
   <section class="section wrap contact" id="contact" aria-labelledby="contact-title">
@@ -358,6 +373,6 @@
   <span>Backend engineer · Tashkent</span>
 </footer>
 
-<script src="scripts/main.js" defer></script>
+<script src="scripts/main.js?v=8" defer></script>
 </body>
 </html>
