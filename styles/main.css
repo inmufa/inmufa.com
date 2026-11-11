@@ -236,6 +236,7 @@ a { color: inherit; }
 }
 .hero__title em { font-style: italic; color: var(--accent); }
 .hero__title .line { display: block; }
+.hero__cite { margin-top: 1rem; color: var(--muted); }
 .mask { display: inline-block; vertical-align: top; overflow: hidden; padding: 0 0.06em 0.1em 0; margin: 0 -0.06em -0.1em 0; }
 .mask > span { display: inline-block; transform: translateY(110%); animation: rise 0.8s var(--out) forwards; animation-delay: calc(var(--i, 0) * 0.1s); }
 @keyframes rise { to { transform: none; } }
